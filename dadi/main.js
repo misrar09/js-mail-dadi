@@ -1,4 +1,47 @@
+const userNumber = document.querySelector(".your_number");
+const computerNumber = document.querySelector(".computer_number");
+const btnStart = document.getElementById("btn");
+btnStart.style.width = "5rem"
 
+
+const winner = document.getElementById("winner");
+winner.style.fontSize = "2rem";
+winner.style.color = "Green";
+
+btnStart.addEventListener("click", function () {
+
+    const yourNumber = Math.floor(Math.random() * (7 - 1) + 1);
+    userNumber.innerHTML = `Your Number: ${yourNumber}`;
+
+    const randomNumber = Math.floor(Math.random() * (7 - 1) + 1);
+    computerNumber.innerHTML = `Computer's Number: ${randomNumber}`;
+
+    if (yourNumber > randomNumber) {
+        winner.innerHTML = `You Won`;
+    }
+
+    else if (yourNumber < randomNumber) {
+        winner.innerHTML = `Computer Won`;
+    }
+
+
+    else {
+        winner.innerHTML = `Draw`;
+    }
+
+
+
+});
+
+
+
+
+
+
+//GAME WITH USER INPUT NUMBER
+//************************** */
+
+/* 
 
 const userInput = document.getElementById("user_input");
 const yourNumber = document.querySelector(".your_number")
@@ -39,7 +82,13 @@ btnEnter.addEventListener("click", function () {
         
     }
 
-});
+}); */
+
+
+
+
+
+
 
 
 
